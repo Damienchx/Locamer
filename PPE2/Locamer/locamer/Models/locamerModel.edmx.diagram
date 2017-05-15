@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7a069fcf89754f419cccd8015ff4f6dc" Name="Diagram1">
+        <EntityTypeShape EntityType="LOCAMERDataModel.Client" Width="1.5" PointX="9" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LOCAMERDataModel.location" Width="1.5" PointX="0.875" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LOCAMERDataModel.mobil_home" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LOCAMERDataModel.option" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LOCAMERDataModel.sejour" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LOCAMERDataModel.sysdiagram" Width="1.5" PointX="10.625" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LOCAMERDataModel.tarif" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LOCAMERDataModel.type_sejour" Width="1.5" PointX="8.25" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="LOCAMERDataModel.FK_sejour_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="LOCAMERDataModel.FK_location_options" ManuallyRouted="false" />
+        <AssociationConnector Association="LOCAMERDataModel.FK_location_sejour" ManuallyRouted="false" />
+        <AssociationConnector Association="LOCAMERDataModel.FK_mobil_home_tarif" ManuallyRouted="false" />
+        <AssociationConnector Association="LOCAMERDataModel.FK_sejour_mobil_home" ManuallyRouted="false" />
+        <AssociationConnector Association="LOCAMERDataModel.FK_sejour_type_sejour1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

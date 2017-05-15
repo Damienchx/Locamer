@@ -1,0 +1,39 @@
+﻿@model IEnumerable<locamer.Models.type_sejour>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.libelle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.coef_reduc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.libelle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.coef_reduc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_typesejour }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_typesejour }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_typesejour })
+        </td>
+    </tr>
+}
+
+</table>

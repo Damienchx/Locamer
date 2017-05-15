@@ -1,0 +1,50 @@
+﻿@model locamer.Models.location
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.quantite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duree_loc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duree_loc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.option.libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.option.libelle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sejour.Id_sejour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sejour.Id_sejour)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

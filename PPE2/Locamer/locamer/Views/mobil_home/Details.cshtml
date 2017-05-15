@@ -1,0 +1,42 @@
+﻿@model locamer.Models.mobil_home
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>mobil_home</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.capacite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.terrasse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.terrasse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tarif.libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tarif.libelle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.code_mobilhome }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

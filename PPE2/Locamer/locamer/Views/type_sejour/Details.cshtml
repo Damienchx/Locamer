@@ -1,0 +1,34 @@
+﻿@model locamer.Models.type_sejour
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>type_sejour</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.libelle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.coef_reduc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coef_reduc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_typesejour }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

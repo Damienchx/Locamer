@@ -1,0 +1,63 @@
+﻿@model IEnumerable<locamer.Models.sejour>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.debut_sejour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fin_sejour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_loc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mobil_home.code_mobilhome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type_sejour.libelle)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.debut_sejour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fin_sejour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_loc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mobil_home.code_mobilhome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type_sejour.libelle)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_sejour }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_sejour }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_sejour })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,66 @@
+﻿@model locamer.Models.sejour
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>sejour</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.debut_sejour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.debut_sejour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fin_sejour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fin_sejour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_loc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_loc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mobil_home.code_mobilhome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mobil_home.code_mobilhome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type_sejour.libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type_sejour.libelle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_sejour }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
