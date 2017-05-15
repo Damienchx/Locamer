@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    <title>@ViewBag.Title - Mon Aplli Locamer</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -13,21 +13,24 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nom d'application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Mon Aplli Locamer", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
-                    <li>@Html.ActionLink("À propos de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">@Html.ActionLink("Accueil", "Index", "Home")</li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Séjour </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown">@Html.ActionLink("Liste des mobli-home", "Index", "mobil_home")</li>
+                        <li class="dropdown"> @Html.ActionLink("Liste des locations", "Index", "locations")</li>
+                        <li class="dropdown">@Html.ActionLink("Liste des mobli-home", "Index", "mobil_home")</li>
+                        <li class="dropdown">@Html.ActionLink("Liste des options", "Index", "options")</li>
+                        <li class="dropdown">@Html.ActionLink("Liste des séjours", "Index", "sejours")</li>
+                        <li class="dropdown">@Html.ActionLink("Liste des tarifs", "Index", "tarifs")</li>
+                        <li class="dropdown">@Html.ActionLink("Liste des types de séjour", "Index", "type_sejour")</li>
+                    </ul></li>
+                <li class="dropdown">@Html.ActionLink("Liste des clients", "Index", "Clients")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
         </div>
     </div>
     <div class="container body-content">
